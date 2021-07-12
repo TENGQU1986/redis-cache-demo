@@ -10,6 +10,10 @@ const DEFAULT_EXPIRATION_INTERVAL =3600
 const app = express();
 app.use(cors());
 
+app.get('/', (req, res) => {
+  res.json('Hello World')
+})
+
 app.get("/photos", async (req, res) => {
     
   const albumId = req.query.albumId;
